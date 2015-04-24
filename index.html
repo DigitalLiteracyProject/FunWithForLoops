@@ -2,17 +2,18 @@
 <html>
     <head>
         <title>Fun With For Loops</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <!-- for loop visualization -->
         <div id='box_div'></div>
         
         <!-- for loop input -->
-        <form id="myForm" action="form_action.asp">
-            for (var i = <input type="text" name="init">
-            , i = <input type="text" name="cond">
-            , i += <input type="text" name="update"> );
-            <br><input type="button" onclick="try_solution()" value="Done!">
+        <form>
+            for (var i = <input type="text" id="init" maxlength="2" size="2">
+            , i &lt; <input type="text" id="cond" maxlength="2" size="2">
+            , i += <input type="text" id="update" maxlength="2" size="2"> );
+            <br><input type="button" onclick="try_answer()" value="Go!">
         </form>
 
         <script src="raphael.js" type="text/javascript" charset="utf-8"></script>

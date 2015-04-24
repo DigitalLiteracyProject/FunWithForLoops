@@ -8,8 +8,11 @@ var ans_text_y = 114;
 // create canvas 600 × 200 at 10, 10 in box_div
 var paper = Raphael(document.getElementById('box_div'), 600, 200);
 
-// TODO: randomize correct parameters
-var correct_params = [0, 10, 2];
+// TODO: create more and/or randomize correct parameters
+var possible_params = [[0, 10, 2], [0, 10, 3], [2, 8, 1], [5, 10, 1],
+	[5, 10, 2], [0, 5, 1], [0, 6, 2], [0, 8, 3], [2, 9, 2], [0, 10, 4]];
+var r = Math.floor(Math.random() * possible_params.length);
+var correct_params = possible_params[r];
 
 // draw a row of numbered boxes to display goal
 paper.text(45, 20, 'Goal:').attr('font-size', text_size);
